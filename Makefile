@@ -1,5 +1,5 @@
 CXX = g++
-CXXFLAGS = -Wall -O2
+CXXFLAGS = -Wall -Ofast -march=native -flto
 
 LIBRARIES = opencv_core opencv_stitching opencv_highgui
 LDFLAGS = -s $(foreach library, $(LIBRARIES), -l$(library))
