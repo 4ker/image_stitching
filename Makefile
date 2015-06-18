@@ -1,5 +1,5 @@
-CXX = g++
-CXXFLAGS = -Wall -Ofast -march=native -flto
+CXX = clang++
+CXXFLAGS = -std=c++14 -pedantic-errors -Wall -Ofast -march=native -pipe -flto
 
 LIBRARIES = opencv_core opencv_stitching opencv_highgui
 LDFLAGS = -s $(foreach library, $(LIBRARIES), -l$(library))
